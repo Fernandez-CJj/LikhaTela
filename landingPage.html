@@ -468,12 +468,164 @@
         font-weight: 800;
       }
 
-      .mini-footer {
-        padding: 28px 0;
-        color: var(--muted);
-        border-top: 1px solid var(--line);
+      .team-section {
         background: #fffdf8;
+      }
+
+      .team-card {
+        height: 100%;
+        padding: 26px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--paper);
+      }
+
+      .team-photo {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        display: block;
+        margin-bottom: 18px;
+        border: 1px solid rgba(167, 123, 65, 0.2);
+        border-radius: 8px;
+        background: #fff;
+        object-fit: cover;
+        object-position: center top;
+      }
+
+      .team-card h3 {
+        margin-bottom: 4px;
+        font-size: 1.25rem;
+        font-weight: 900;
+      }
+
+      .team-role {
+        margin-bottom: 14px;
+        color: var(--gold);
+        font-weight: 800;
+      }
+
+      .team-card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      .testimonials-section {
+        background: var(--paper);
+      }
+
+      .testimonial-card {
+        height: 100%;
+        padding: 28px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fffdf8;
+        box-shadow: 0 16px 36px rgba(21, 20, 20, 0.08);
+      }
+
+      .testimonial-quote {
+        margin-bottom: 22px;
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 1.2rem;
+        line-height: 1.55;
+      }
+
+      .testimonial-person {
+        margin-bottom: 2px;
+        font-weight: 900;
+      }
+
+      .testimonial-label {
+        color: var(--gold);
         font-size: 0.92rem;
+        font-weight: 800;
+      }
+
+      .mini-footer {
+        padding: 58px 0 28px;
+        color: rgba(255, 255, 255, 0.72);
+        border-top: 1px solid var(--line);
+        background: var(--ink);
+        font-size: 0.92rem;
+      }
+
+      .mini-footer h2,
+      .mini-footer h3 {
+        color: #fff;
+      }
+
+      .mini-footer h2 {
+        margin-bottom: 12px;
+        font-size: clamp(1.8rem, 4vw, 3rem);
+        font-weight: 900;
+      }
+
+      .mini-footer h3 {
+        margin-bottom: 16px;
+        font-size: 1.1rem;
+        font-weight: 900;
+      }
+
+      .footer-copy {
+        max-width: 520px;
+        line-height: 1.7;
+      }
+
+      .footer-list {
+        display: grid;
+        gap: 8px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .footer-list a,
+      .footer-social a,
+      .legal-links a {
+        color: rgba(255, 255, 255, 0.72);
+        text-decoration: none;
+      }
+
+      .footer-list a:hover,
+      .footer-social a:hover,
+      .legal-links a:hover {
+        color: var(--gold);
+      }
+
+      .footer-newsletter {
+        padding: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.06);
+      }
+
+      .footer-newsletter .form-control {
+        border-color: rgba(255, 255, 255, 0.18);
+        background: rgba(255, 255, 255, 0.9);
+      }
+
+      .footer-newsletter .form-note {
+        color: rgba(255, 255, 255, 0.68);
+      }
+
+      .footer-social {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 18px;
+      }
+
+      .footer-bottom {
+        margin-top: 42px;
+        padding-top: 22px;
+        border-top: 1px solid rgba(255, 255, 255, 0.14);
+      }
+
+      .legal-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
       }
 
       @media (max-width: 991px) {
@@ -567,6 +719,12 @@
             <li class="nav-item">
               <a class="nav-link" href="#story">Story</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#team">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -627,7 +785,6 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-lg-6">
-              <span class="section-kicker">Section 2: Call to Action</span>
               <h2 class="section-title">
                 Be first in line when the next Filipino streetwear drop lands.
               </h2>
@@ -708,7 +865,6 @@
         <div class="container">
           <div class="row mb-4">
             <div class="col-lg-8">
-              <span class="section-kicker">Section 3: Benefits</span>
               <h2 class="section-title">
                 Made for shoppers who want style with identity.
               </h2>
@@ -790,7 +946,6 @@
         <div class="container">
           <div class="row g-5">
             <div class="col-lg-7">
-              <span class="section-kicker">Section 4: More Information</span>
               <h2 class="section-title">
                 Built from the search for streetwear with Filipino identity.
               </h2>
@@ -884,14 +1039,227 @@
           </div>
         </div>
       </section>
+
+      <section class="team-section" id="team">
+        <div class="container">
+          <div class="row mb-4">
+            <div class="col-lg-8">
+              <h2 class="section-title">
+                A five-member team building LikhaTela from different strengths.
+              </h2>
+              <p class="section-copy">
+                These are temporary placeholders for now. Replace the names,
+                photos, and final roles once your group decides each member's
+                official contribution.
+              </p>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-6 col-xl">
+              <article class="team-card">
+                <img
+                  class="team-photo"
+                  src="assets/team-ceo.png"
+                  alt="CEO portrait"
+                />
+                <h3>Member Name</h3>
+                <div class="team-role">CEO - Visionary</div>
+                <p>
+                  Defines the overall direction of LikhaTela, keeps the startup
+                  focused on its purpose, and guides decisions around culture,
+                  identity, and long-term growth.
+                </p>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl">
+              <article class="team-card">
+                <img
+                  class="team-photo"
+                  src="assets/team-cto.png"
+                  alt="CTO portrait"
+                />
+                <h3>Member Name</h3>
+                <div class="team-role">CTO - Architect</div>
+                <p>
+                  Plans the technical structure of the platform, connects the
+                  app features together, and makes sure the system can support
+                  browsing, customization, and checkout.
+                </p>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl">
+              <article class="team-card">
+                <img
+                  class="team-photo"
+                  src="assets/team-project-manager.png"
+                  alt="Project manager portrait"
+                />
+                <h3>Member Name</h3>
+                <div class="team-role">Project Manager - Operator</div>
+                <p>
+                  Organizes tasks, timelines, and team responsibilities so the
+                  project moves smoothly from idea to prototype while keeping
+                  everyone aligned.
+                </p>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl">
+              <article class="team-card">
+                <img
+                  class="team-photo"
+                  src="assets/team-marketing.png"
+                  alt="Marketing portrait"
+                />
+                <h3>Member Name</h3>
+                <div class="team-role">Marketing - Hacker</div>
+                <p>
+                  Finds creative ways to reach early adopters through social
+                  media, campus promotions, drop teasers, and community-driven
+                  campaigns.
+                </p>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl">
+              <article class="team-card">
+                <img
+                  class="team-photo"
+                  src="assets/team-designer.png"
+                  alt="Designer portrait"
+                />
+                <h3>Member Name</h3>
+                <div class="team-role">Designer - Designer</div>
+                <p>
+                  Creates the visual identity, app screens, product mockups, and
+                  user experience that make LikhaTela feel stylish, meaningful,
+                  and proudly Filipino.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials-section" id="contact">
+        <div class="container">
+          <div class="row mb-4">
+            <div class="col-lg-8">
+              <h2 class="section-title">
+                Early concept feedback for a startup still in development.
+              </h2>
+              <p class="section-copy">
+                Since LikhaTela is not launched yet, this section shares
+                feedback based on the app concept, prototype screens, and the
+                problem it aims to solve.
+              </p>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-4">
+              <article class="testimonial-card">
+                <p class="testimonial-quote">
+                  "LikhaTela makes it easier to imagine Filipino-inspired
+                  streetwear in one place instead of searching through many
+                  separate pages."
+                </p>
+                <div class="testimonial-person">Student Shopper</div>
+                <div class="testimonial-label">Target User Feedback</div>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="testimonial-card">
+                <p class="testimonial-quote">
+                  "The customization flow gives local designs more meaning
+                  because buyers can make each piece feel personal."
+                </p>
+                <div class="testimonial-person">Local Designer</div>
+                <div class="testimonial-label">Potential Partner Feedback</div>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="testimonial-card">
+                <p class="testimonial-quote">
+                  "A single checkout and drop preview system could help students
+                  discover new pieces faster and support Filipino creators."
+                </p>
+                <div class="testimonial-person">Campus Promoter</div>
+                <div class="testimonial-label">Early Interest Feedback</div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="mini-footer">
-      <div
-        class="container d-flex flex-column flex-md-row justify-content-between gap-2"
-      >
-        <span>LikhaTela startup landing page prototype</span>
-        <span>Sections 1 to 4</span>
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-5">
+            <h2>Stay close to the next drop.</h2>
+            <p class="footer-copy">
+              Follow LikhaTela for Filipino-inspired streetwear updates,
+              prototype progress, designer stories, and early access
+              announcements.
+            </p>
+            <div class="footer-social" aria-label="Social media links">
+              <a href="https://www.facebook.com/profile.php?id=61589706982664"
+                >Facebook</a
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <h3>Contact</h3>
+            <ul class="footer-list">
+              <li>
+                Email:
+                <a>22ur0729@psu.edu.ph</a>
+              </li>
+              <li>Phone: +63 992 957 9473</li>
+              <li>Location: Urdaneta City, Pangasinan, Philippines</li>
+            </ul>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="footer-newsletter">
+              <h3>Newsletter</h3>
+              <form id="footerSignupForm">
+                <label class="visually-hidden" for="footerEmail"
+                  >Email address</label
+                >
+                <div class="row g-2">
+                  <div class="col-sm-7">
+                    <input
+                      class="form-control"
+                      type="email"
+                      id="footerEmail"
+                      placeholder="Your email"
+                      required
+                    />
+                  </div>
+                  <div class="col-sm-5">
+                    <button
+                      class="btn btn-likha btn-primary-likha w-100"
+                      type="submit"
+                    >
+                      Sign Up
+                    </button>
+                  </div>
+                </div>
+                <p class="form-note" id="footerFormMessage">
+                  Get launch news, drop previews, and designer updates.
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="footer-bottom d-flex flex-column flex-md-row justify-content-between gap-3"
+        >
+          <span>&copy; 2026 LikhaTela by LokalThread Creative Co.</span>
+        </div>
       </div>
     </footer>
 
@@ -899,12 +1267,21 @@
     <script>
       const signupForm = document.querySelector("#signupForm");
       const formMessage = document.querySelector("#formMessage");
+      const footerSignupForm = document.querySelector("#footerSignupForm");
+      const footerFormMessage = document.querySelector("#footerFormMessage");
 
       signupForm.addEventListener("submit", function (event) {
         event.preventDefault();
         formMessage.textContent =
           "Thanks! You are now on the LikhaTela early access list.";
         signupForm.reset();
+      });
+
+      footerSignupForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        footerFormMessage.textContent =
+          "Thanks! We will send LikhaTela updates to your inbox.";
+        footerSignupForm.reset();
       });
     </script>
   </body>
